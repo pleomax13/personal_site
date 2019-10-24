@@ -1,6 +1,6 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -15,6 +15,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  router: {
+    // base: '/web-d/personal_site/dist/',
+    middleware: [
+      'setLang'
+    ]
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -23,6 +29,10 @@ export default {
   ** Global CSS
   */
   css: [
+    {
+      src: '~/assets/style/style.scss',
+      lang: 'scss'
+    }
   ],
   /*
   ** Plugins to load before mounting the App
@@ -40,6 +50,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Build configuration
@@ -48,7 +59,10 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend (config, { isDev, isClient }) {
     }
   }
+  // generate: {
+  //   subFolders: false
+  // }
 }
