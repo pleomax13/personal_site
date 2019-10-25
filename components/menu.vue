@@ -1,18 +1,13 @@
 <template>
   <div class="menu-wrap">
-    <div>
-      a
-    </div>
-    <div class="menu">
-      <nuxt-link
-        v-for="link in menu"
-        :key="link.link"
-        :to="link.link"
-        class="link"
-      >
-        {{ link.title }}
-      </nuxt-link>
-    </div>
+    <nuxt-link
+      v-for="link in menu"
+      :key="link.link"
+      :to="link.link"
+      class="link"
+    >
+      {{ link.title }}
+    </nuxt-link>
   </div>
 </template>
 
@@ -27,6 +22,46 @@ export default {
     ...mapState({
       lang: state => state.currentLang.lang
     }),
+    langBtns () {
+      const path = this.$route.path
+      if (this.lang === 'ru') {
+        switch (path) {
+          case '/':
+            return ['ua', 'en']
+          case '/biography':
+            return ['ua']
+          case '/abstract':
+            return ['ua', 'en']
+
+          default:
+            return []
+        }
+      } else if (this.lang === 'ua') {
+        switch (path) {
+          case '/':
+            return ['ru', 'en']
+          case '/biography':
+            return ['ru']
+          case '/abstract':
+            return ['ru', 'en']
+
+          default:
+            return []
+        }
+      } else if (this.lang === 'en') {
+        switch (path) {
+          case '/':
+            return ['ru', 'ua']
+          case '/abstract':
+            return ['ru', 'ua']
+
+          default:
+            return []
+        }
+      }
+
+      return []
+    },
     menu () {
       if (this.lang === 'ru') {
         return [
@@ -39,7 +74,7 @@ export default {
             title: 'Биография'
           },
           {
-            link: '/essay',
+            link: '/abstract',
             title: 'Реферат'
           },
           {
@@ -66,7 +101,7 @@ export default {
             title: 'Біографія'
           },
           {
-            link: '/essay',
+            link: '/abstract',
             title: 'Реферат'
           }
         ]
@@ -77,7 +112,7 @@ export default {
             title: 'Resume'
           },
           {
-            link: '/essay',
+            link: '/abstract',
             title: 'Abstract'
           }
         ]
@@ -115,5 +150,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .menu-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
 </style>
