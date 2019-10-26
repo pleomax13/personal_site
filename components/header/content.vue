@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <img src="/photo.jpg" alt="" class="photo">
+    <img src="/photo.jpg" alt="" class="photo" @click="showModal">
     <div class="content-wrap">
       <h1>
         {{ mainInfo.name }}
@@ -24,8 +24,13 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
+  data () {
+    return {
+      modal: false
+    }
+  },
   computed: {
     ...mapState({
       lang: state => state.currentLang.lang
@@ -68,16 +73,26 @@ export default {
         head: 'Научный руководитель: к.т.н., проф. Хламов Михаил Георгиевич'
       }
     }
+  },
+  methods: {
+    ...mapMutations({
+      toggleModal: 'modal/SET_TOGGLE_MODAL'
+    }),
+    showModal () {
+      this.toggleModal(true)
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
   .photo {
-    height: 25rem;
+    height: 24rem;
     width: auto;
     margin-right: 2.5rem;
     flex-shrink: 0;
+    border-radius: .5rem;
+    cursor: pointer;
   }
 
   .content-wrap {

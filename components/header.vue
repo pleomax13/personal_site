@@ -1,5 +1,12 @@
 <template>
   <div class="header">
+    <transition name="fade">
+      <div v-if="showModal" class="modal">
+        <img src="/saveliev_big.jpg" alt="" class="photo-big">
+        <div class="bg" @click="toggleModal(false)" />
+        <img src="/close.svg" alt="" class="close" title="Закрыть" @click="toggleModal(false)">
+      </div>
+    </transition>
     <app-lang class="z-index app-lang" />
     <app-menu
       ref="menu"
@@ -16,6 +23,8 @@
 import lang from '~/components/lang.vue'
 import menu from '~/components/menu'
 import content from '~/components/header/content'
+import { mapState, mapMutations } from 'vuex'
+
 export default {
   components: {
     'app-menu': menu,
@@ -31,6 +40,9 @@ export default {
     }
   },
   computed: {
+    ...mapState({
+      showModal: state => state.modal.showModal
+    })
   },
   mounted () {
     this.menuTop = this.$refs.menu.$el.getBoundingClientRect().top
@@ -47,7 +59,9 @@ export default {
 
       if (this.fixMenu === true) {
         this.$nextTick(() => {
-          this.showMenu = true
+          setTimeout(() => {
+            this.showMenu = true
+          }, 0)
         })
       }
     })
@@ -57,6 +71,9 @@ export default {
     })
   },
   methods: {
+    ...mapMutations({
+      toggleModal: 'modal/SET_TOGGLE_MODAL'
+    }),
     getMenuSize () {
       this.menuSize = this.$refs.menu.$el.getBoundingClientRect().height
     }
@@ -68,11 +85,11 @@ export default {
   .header {
     width: 100%;
     max-width: 192rem;
-    margin: auto;
-    padding: 1rem 0 6rem;
+    margin: 0 auto;
+    padding: 1rem 0 8rem;
     position: relative;
     overflow: hidden;
-    background: url('/bg_header.png') no-repeat center;
+    background: url('/bg_header.jpg') no-repeat center;
     background-size: cover;
     background-color: gray;
 
@@ -86,7 +103,7 @@ export default {
       width: 100%;
       height: 100%;
       z-index: 0;
-      background: rgba(0, 0, 0, 0.527);
+      background: rgba(0, 0, 0, 0.6);
     }
 
     &::before {
@@ -97,7 +114,7 @@ export default {
       height: 0;
       left: 0;
       right: 0;
-      border-bottom: 60px solid white;
+      border-bottom: 8rem solid white;
       border-left: 100vw solid transparent;
       z-index: 1;
     }
@@ -137,5 +154,58 @@ export default {
   .menu-bg {
     width: 100%;
     margin-bottom: 3rem;
+  }
+
+  .modal {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.644);
+    right: 0;
+    z-index: 9999999;
+
+    .bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: -1;
+      cursor: pointer;
+    }
+
+    .photo-big {
+      height: auto;
+      width: 60vw;
+      max-width: 36rem;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: .5rem;
+      z-index: 2;
+    }
+
+    .close {
+      position: absolute;
+      right: 3rem;
+      top: 3rem;
+      width: 2rem;
+      height: 2rem;
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>

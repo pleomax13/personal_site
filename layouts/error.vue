@@ -18,15 +18,16 @@ export default {
 
 <style scoped>
 section {
-  margin: auto;
+  margin: 0 auto;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 10rem;
   text-align: center;
 }
 
 h3 {
   text-align: center;
+  font-size: 5rem;
 }
 </style>

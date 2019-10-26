@@ -7,9 +7,9 @@
         :to="`?lang=${btn}`"
         class="lang"
       >
-        <img v-if="btn === 'ru'" src="/ru.png" alt="Русский">
-        <img v-else-if="btn === 'ua'" src="/ua.png" alt="Українська" title="Українська">
-        <img v-else-if="btn === 'en'" src="/en.png" alt="English" title="English">
+        <img v-if="btn === 'ru'" src="/ru.svg" alt="Русский" class="lang-img">
+        <img v-else-if="btn === 'ua'" src="/ua.svg" alt="Українська" title="Українська" class="lang-img">
+        <img v-else-if="btn === 'en'" src="/en.svg" alt="English" title="English" class="lang-img">
       </nuxt-link>
     </div>
     <div class="links-wrap">
@@ -90,7 +90,7 @@ export default {
 
   .lang {
     &+& {
-      margin-left: 1rem;
+      margin-left: 2rem;
     }
   }
 
@@ -125,5 +125,10 @@ export default {
 
   .links-wrap {
     display: flex;
+  }
+
+  .lang-img {
+    height: 1.9rem;
+    width: auto;
   }
 </style>
