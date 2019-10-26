@@ -23,5 +23,9 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0"
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "IE >= 9"
+  ]
 }

@@ -7,4 +7,31 @@ html {
   * {
     font-family: 'Roboto', sans-serif;
   }
+
+  font-size: 10px;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    font-size: calc((100vw / 320) * 10);
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    font-size: calc((100vw / 768) * 10);
+  }
+
+  @media only screen and (min-width: 1280px) and (max-width: 1599px) {
+    font-size: calc((100vw / 1280) * 10);
+  }
+
+  @media only screen and (min-width: 1600px) and (max-width: 1919px) {
+    font-size:  calc((100vw / 1600) * 10);
+  }
+
+  @media only screen and (min-width: 1920px) {
+    font-size:  10px;
+  }
 }
+
+body:lang(en) q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+body:lang(uk) q, body:lang(de) q { quotes: "\201E" "\201C"; }
+body:lang(ru) q, body:lang(fr) q { quotes: "\00AB" "\00BB" "\201E" "\201C"; }

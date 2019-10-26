@@ -12,18 +12,18 @@
         <img v-else-if="btn === 'en'" src="/en.png" alt="English" title="English">
       </nuxt-link>
     </div>
-    <div>
-      <a href="http://donntu.org/">
+    <div class="links-wrap">
+      <a target="_blank" href="http://donntu.org/" class="link">
         <span v-if="lang ==='ru' || lang === 'ua'">ДонНТУ</span>
         <span v-if="lang ==='en'">DonNTU</span>
       </a>
-      <a v-if="lang ==='ru'" href="http://masters.donntu.org">
+      <a v-if="lang ==='ru'" target="_blank" href="http://masters.donntu.org" class="link">
         Портал магистров
       </a>
-      <a v-if="lang ==='ua'" href="http://masters.donntu.org/indexu.htm">
+      <a v-if="lang ==='ua'" target="_blank" href="http://masters.donntu.org/indexu.htm" class="link">
         Портал магістрів
       </a>
-      <a v-if="lang ==='en'" href="http://masters.donntu.org/indexe.htm">
+      <a v-if="lang ==='en'" target="_blank" href="http://masters.donntu.org/indexe.htm" class="link">
         Masters Portal
       </a>
     </div>
@@ -85,20 +85,45 @@ export default {
   .lang-container {
     display: flex;
     justify-content: space-between;
+    padding: 0 3rem;
   }
 
   .lang {
     &+& {
-      margin-left: 10px;
+      margin-left: 1rem;
     }
   }
 
   a {
     text-decoration: none;
     color: white;
+  }
 
-    &:hover {
-      text-decoration: underline;
+  .link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+
+    &+& {
+      margin-left: 1.5rem;
     }
+    &::after {
+      display: block;
+      content: "";
+      height: .1rem;
+      width: 0%;
+      transition: width .2s ease-in-out;
+      background-color: white;
+    }
+
+    &:hover{
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .links-wrap {
+    display: flex;
   }
 </style>

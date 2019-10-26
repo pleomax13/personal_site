@@ -60,6 +60,18 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, { isDev, isClient }) {
+    },
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {
+          grid: true,
+          flexbox: true
+          // browsers: ['last 2 versions', 'ie >= 9']
+        }
+      }
     }
   }
   // generate: {

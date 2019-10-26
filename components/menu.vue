@@ -5,6 +5,7 @@
       :key="link.link"
       :to="link.link"
       class="link"
+      :class="{active: path === link.link.split('?')[0]}"
     >
       {{ link.title }}
     </nuxt-link>
@@ -66,53 +67,53 @@ export default {
       if (this.lang === 'ru') {
         return [
           {
-            link: '/',
+            link: '/?lang=ru',
             title: 'Резюме'
           },
           {
-            link: '/biography',
+            link: '/biography?lang=ru',
             title: 'Биография'
           },
           {
-            link: '/abstract',
+            link: '/abstract?lang=ru',
             title: 'Реферат'
           },
           {
-            link: '/links',
+            link: '/links?lang=ru',
             title: 'Ссылки'
           },
           {
-            link: '/report',
+            link: '/report?lang=ru',
             title: 'Отчет'
           },
           {
-            link: '/individual',
+            link: '/individual?lang=ru',
             title: 'Индивидуальный раздел'
           }
         ]
       } else if (this.lang === 'ua') {
         return [
           {
-            link: '/',
+            link: '/?lang=ua',
             title: 'Резюме'
           },
           {
-            link: '/biography',
+            link: '/biography?lang=ua',
             title: 'Біографія'
           },
           {
-            link: '/abstract',
+            link: '/abstract?lang=ua',
             title: 'Реферат'
           }
         ]
       } else if (this.lang === 'en') {
         return [
           {
-            link: '/',
+            link: '/?lang=en',
             title: 'Resume'
           },
           {
-            link: '/abstract',
+            link: '/abstract?lang=en',
             title: 'Abstract'
           }
         ]
@@ -144,6 +145,9 @@ export default {
           title: 'Индивидуальный раздел'
         }
       ]
+    },
+    path () {
+      return this.$route.path
     }
   }
 }
@@ -153,5 +157,40 @@ export default {
   .menu-wrap {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    min-height: 4rem;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+  }
+
+  .link {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+
+    &+& {
+      margin-left: 2.5rem;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      height: .15rem;
+      width: 0%;
+      transition: width .2s ease-in-out;
+      background-color: white;
+    }
+
+    &:hover{
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      &::after {
+        width: 100%;
+      }
+    }
   }
 </style>
