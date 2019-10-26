@@ -21,6 +21,8 @@ export default {
 <style lang="scss" scoped>
  section {
    padding: 0 3rem;
+   text-align: justify;
+
    /deep/ p {
      font-size: 1.8rem;
      text-indent: 2.5rem;
