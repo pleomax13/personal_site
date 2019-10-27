@@ -9,14 +9,14 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Савельев Дмитрий Александрович - Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' } // добавить путь к favicon
     ]
   },
   router: {
-    // base: '/web-d/personal_site/dist/',
+    // base: '/personal_site/',
     middleware: [
       'setLang'
     ]

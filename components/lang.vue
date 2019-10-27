@@ -7,9 +7,9 @@
         :to="`?lang=${btn}`"
         class="lang"
       >
-        <img v-if="btn === 'ru'" src="/ru.svg" alt="Русский" class="lang-img">
-        <img v-else-if="btn === 'ua'" src="/ua.svg" alt="Українська" title="Українська" class="lang-img">
-        <img v-else-if="btn === 'en'" src="/en.svg" alt="English" title="English" class="lang-img">
+        <img v-if="btn === 'ru'" src="~/assets/imgs/icons/ru.svg" alt="Русский" class="lang-img">
+        <img v-else-if="btn === 'ua'" src="~/assets/imgs/icons/ua.svg" alt="Українська" title="Українська" class="lang-img">
+        <img v-else-if="btn === 'en'" src="~/assets/imgs/icons/en.svg" alt="English" title="English" class="lang-img">
       </nuxt-link>
       <!-- <img src="/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleSidebar(false)"> -->
     </div>

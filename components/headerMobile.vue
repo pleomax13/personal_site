@@ -2,9 +2,9 @@
   <div class="header">
     <transition name="fade">
       <div v-if="showModal" class="modal">
-        <img src="/saveliev_big.jpg" alt="" class="photo-big">
+        <img src="~/assets/imgs/saveliev_big.jpg" alt="" class="photo-big">
         <div class="bg" @click="toggleModal(false)" />
-        <img src="/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleModal(false)">
+        <img src="~/assets/imgs/icons/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleModal(false)">
       </div>
     </transition>
     <div class="sidebar" :class="{show: showSidebar}">
@@ -106,7 +106,7 @@ export default {
     padding: 1rem 0 8rem;
     position: relative;
     overflow: hidden;
-    background: url('/bg_header.jpg') no-repeat center;
+    background: url('../assets/imgs/bg_header.jpg') no-repeat center;
     background-size: cover;
     background-color: $main-grey;
 

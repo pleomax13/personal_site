@@ -4,7 +4,7 @@
 
 <style lang="scss" scoped>
   section {
-    background: url('/bg_header.jpg') no-repeat center;
+    background: url('../assets/imgs/bg_header.jpg') no-repeat center;
     background-size: cover;
     background-color: gray;
     width: 100%;

@@ -1,6 +1,6 @@
 <template>
   <div class="btn-up" @click="scroll">
-    <img src="/up.svg" alt="" class="img">
+    <img src="~/assets/imgs/icons/up.svg" alt="" class="img">
   </div>
 </template>
 

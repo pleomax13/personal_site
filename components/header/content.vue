@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <img src="/saveliev_big.jpg" alt="" class="photo" @click="showModal">
+    <img src="~/assets/imgs/saveliev_big.jpg" alt="" class="photo" @click="showModal">
     <div class="content-wrap">
       <h1>
         {{ mainInfo.name }}
