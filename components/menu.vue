@@ -79,6 +79,10 @@ export default {
             title: 'Реферат'
           },
           {
+            link: '/library?lang=ru',
+            title: 'Библиотека'
+          },
+          {
             link: '/links?lang=ru',
             title: 'Ссылки'
           },
