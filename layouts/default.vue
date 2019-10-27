@@ -1,6 +1,7 @@
 <template>
   <div class="layout" :lang="lang">
-    <app-header class="app-header" />
+    <!-- <app-header class="app-header" /> -->
+    <component :is="headerComponent" class="app-header" />
     <transition name="fade">
       <nuxt class="nuxt" />
     </transition>
@@ -10,22 +11,57 @@
 
 <script>
 import { mapState } from 'vuex'
-import header from '~/components/header.vue'
 import footer from '~/components/footer.vue'
+import headerDesktop from '~/components/headerDesktop.vue'
+import headerMobile from '~/components/headerMobile.vue'
 export default {
   components: {
-    'app-header': header,
     'app-footer': footer
+  },
+  data () {
+    return {
+      device: 'mobile'
+    }
   },
   computed: {
     ...mapState({
       lang: state => state.currentLang.lang
+    }),
+    headerComponent () {
+      if (this.device === 'desktop') {
+        return headerDesktop
+      } else {
+        return headerMobile
+      }
+    }
+  },
+  mounted () {
+    this.setDevice()
+
+    window.addEventListener('resize', () => {
+      this.setDevice()
     })
+  },
+  methods: {
+    setDevice () {
+      if (process.client) {
+        const width = document.documentElement.clientWidth
+
+        if (width >= 1280) {
+          this.device = 'desktop'
+        } else if (width >= 768) {
+          this.device = 'tablet'
+        } else {
+          this.device = 'mobile'
+        }
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/style/media_mixin.scss";
   .app-header {
     margin-bottom: 3rem;
   }
@@ -34,6 +70,11 @@ export default {
     width: 100%;
     max-width: 192rem;
     margin: 0 auto;
+    padding: 0 1rem;
+
+   @include tablet {
+     padding: 0 3rem;
+   }
   }
 
   .app-footer {

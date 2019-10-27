@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <img src="/photo.jpg" alt="" class="photo" @click="showModal">
+    <img src="/saveliev_big.jpg" alt="" class="photo" @click="showModal">
     <div class="content-wrap">
       <h1>
         {{ mainInfo.name }}
@@ -47,7 +47,7 @@ export default {
         }
       } else if (this.lang === 'ua') {
         return {
-          name: 'Савельєв Дмитро Олексанлрович',
+          name: 'Савельєв Дмитро Олександрович',
           dep: "Факультет комп'ютерних інформаційних технологій та автоматики",
           caf: 'Кафедра електронної техніки',
           specialty: 'Спеціальність <q>Електроніка та наноелектроніка</q>',
@@ -86,13 +86,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/style/media_mixin.scss";
+
   .photo {
     height: 24rem;
     width: auto;
-    margin-right: 2.5rem;
+    margin-bottom: 3rem;
     flex-shrink: 0;
     border-radius: .5rem;
     cursor: pointer;
+
+    @include _1280 {
+      margin-right: 2.5rem;
+      margin-bottom: 0;
+    }
   }
 
   .content-wrap {
@@ -101,8 +108,21 @@ export default {
 
   .section {
     display: flex;
+    padding: 0 1rem;
+    flex-direction: column;
     align-items: center;
-    padding: 0 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @include tablet {
+      padding: 0 3rem;
+
+    }
+
+    @include _1280 {
+      flex-direction: row;
+      text-align: left;
+    }
   }
 
   h1 {
@@ -114,6 +134,10 @@ export default {
     margin-bottom: 1.5rem;
     font-weight: 400;
     font-size: 2.1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   h2 {

@@ -16,7 +16,8 @@ export default ({ app }) => {
     // Associate each locale to a content file
     messages: {
       ru: require('~/static/content-ru.json'),
-      ua: require('~/static/content-ua.json')
+      ua: require('~/static/content-ua.json'),
+      en: require('~/static/content-en.json')
     }
   })
 }

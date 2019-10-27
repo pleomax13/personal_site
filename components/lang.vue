@@ -11,6 +11,7 @@
         <img v-else-if="btn === 'ua'" src="/ua.svg" alt="Українська" title="Українська" class="lang-img">
         <img v-else-if="btn === 'en'" src="/en.svg" alt="English" title="English" class="lang-img">
       </nuxt-link>
+      <!-- <img src="/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleSidebar(false)"> -->
     </div>
     <div class="links-wrap">
       <a target="_blank" href="http://donntu.org/" class="link">
@@ -31,7 +32,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   computed: {
     ...mapState({
@@ -77,15 +78,29 @@ export default {
 
       return []
     }
+  },
+  methodth: {
+    ...mapMutations({
+      toggleSidebar: 'sidebar/SET_TOGGLE_SIDEBAR'
+    })
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/style/media_mixin.scss";
   .lang-container {
     display: flex;
-    justify-content: space-between;
-    padding: 0 3rem;
+    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include _1280 {
+      height: 2.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 3rem;
+    }
   }
 
   .lang {
@@ -125,10 +140,39 @@ export default {
 
   .links-wrap {
     display: flex;
+    justify-content: space-between;
+
+    @include _1280 {
+      justify-content: flex-start;
+      margin-top: 0;
+    }
   }
 
   .lang-img {
     height: 1.9rem;
     width: auto;
+  }
+
+  .lang-wrap {
+    height: 1.9rem;
+    margin-bottom: 2rem;
+    display: flex;
+
+    @include _1280 {
+      margin-bottom: 0;
+    }
+  }
+
+  .close {
+    height: 1.9rem;
+    width: auto;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    cursor: pointer;
+
+    @include _1280 {
+      display: none;
+    }
   }
 </style>

@@ -1,27 +1,33 @@
 <template>
-  <div class="header">
-    <transition name="fade">
-      <div v-if="showModal" class="modal">
-        <img src="/saveliev_big.jpg" alt="" class="photo-big">
-        <div class="bg" @click="toggleModal(false)" />
-        <img src="/close.svg" alt="" class="close" title="Закрыть" @click="toggleModal(false)">
-      </div>
-    </transition>
-    <app-lang class="z-index app-lang" />
-    <app-menu
-      ref="menu"
-      class="z-index app-menu"
-      :class="{fix: fixMenu, show: showMenu}"
-      :style="{top: fixMenu ? `-${menuSize}px` : ''}"
-    />
-    <div v-if="fixMenu" class="menu-bg" :style="{height: `${menuSize}px`}" />
-    <app-content class="z-index" />
+  <div class="header-container">
+    <div class="header">
+      <transition name="fade">
+        <div v-if="showModal" class="modal">
+          <img src="/saveliev_big.jpg" alt="" class="photo-big">
+          <div class="bg" @click="toggleModal(false)" />
+          <img src="/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleModal(false)">
+        </div>
+      </transition>
+      <app-lang class="z-index app-lang" />
+      <app-menu
+        ref="menu"
+        class="z-index app-menu"
+        :class="{fix: fixMenu, show: showMenu}"
+        :style="{top: fixMenu ? `-${menuSize}px` : ''}"
+      />
+      <div v-if="fixMenu" class="menu-bg" :style="{height: `${menuSize}px`}" />
+      <app-content class="z-index" />
+      <transition name="fade">
+        <app-btn-up v-if="showMenu" />
+      </transition>
+    </div>
   </div>
 </template>
 
 <script>
 import lang from '~/components/lang.vue'
 import menu from '~/components/menu'
+import btnUp from '~/components/btnUp'
 import content from '~/components/header/content'
 import { mapState, mapMutations } from 'vuex'
 
@@ -29,7 +35,8 @@ export default {
   components: {
     'app-menu': menu,
     'app-lang': lang,
-    'app-content': content
+    'app-content': content,
+    'app-btn-up': btnUp
   },
   data () {
     return {
@@ -45,10 +52,11 @@ export default {
     })
   },
   mounted () {
-    this.menuTop = this.$refs.menu.$el.getBoundingClientRect().top
+    this.menuEl = this.$el.querySelector('.app-menu')
+    this.menuTop = this.menuEl.getBoundingClientRect().top
     window.addEventListener('scroll', () => {
       const topHeader = this.$el.getBoundingClientRect().top
-      const bottom = this.$refs.menu.$el.getBoundingClientRect().bottom
+      const bottom = this.menuEl.getBoundingClientRect().bottom
 
       if (bottom <= 0 && this.fixMenu === false) {
         this.fixMenu = true
@@ -75,23 +83,21 @@ export default {
       toggleModal: 'modal/SET_TOGGLE_MODAL'
     }),
     getMenuSize () {
-      this.menuSize = this.$refs.menu.$el.getBoundingClientRect().height
+      this.menuSize = this.menuEl.getBoundingClientRect().height
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .header {
-    width: 100%;
-    max-width: 192rem;
-    margin: 0 auto;
-    padding: 1rem 0 8rem;
-    position: relative;
-    overflow: hidden;
+  @import "~/assets/style/var.scss";
+  @import "~/assets/style/media_mixin.scss";
+  .header-container {
     background: url('/bg_header.jpg') no-repeat center;
     background-size: cover;
-    background-color: gray;
+    background-color: $main-grey;
+    position: relative;
+    overflow: hidden;
 
     &::after {
       content: '';
@@ -119,6 +125,12 @@ export default {
       z-index: 1;
     }
   }
+  .header {
+    width: 100%;
+    max-width: 192rem;
+    margin: 0 auto;
+    padding: 1rem 0 8rem;
+  }
 
   .z-index {
     z-index: 1;
@@ -132,10 +144,10 @@ export default {
     transition: background-color ease-in-out .3s, top ease-in-out .5s;
     z-index: 999;
     background-color: transparent;
+    position: relative;
 
     &.fix {
       position: fixed;
-      background-color: rgb(160, 160, 160);
     }
 
     &.show {
@@ -143,6 +155,20 @@ export default {
       left: 0;
       right: 0;
       margin: auto;
+    }
+    &.fix,
+    &.show {
+      &::after {
+      content: '';
+      position: absolute;
+      left: -100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: $main-grey;
+      width: 500%;
+      z-index: -1;
+      }
     }
   }
 

@@ -1,0 +1,35 @@
+@mixin mobile_portrait {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet_portrait {
+  @media screen and (min-width: 768px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin _1280 {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin _1600 {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin _1920 {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}

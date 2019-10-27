@@ -8,7 +8,6 @@
     background-size: cover;
     background-color: gray;
     width: 100%;
-    max-width: 192rem;
     height: 15rem;
     margin: 0 auto;
     position: relative;

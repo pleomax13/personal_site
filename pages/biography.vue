@@ -3,12 +3,29 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
+  head () {
+    return {
+      title: this.titleHead
+    }
+  },
   data () {
     return {
     }
   },
   computed: {
+    ...mapState({
+      lang: state => state.currentLang.lang
+    }),
+    titleHead () {
+      if (this.lang === 'ua') {
+        return `Біографія ${this.$t('titleHead')}`
+      }
+
+      return `Биография ${this.$t('titleHead')}`
+    },
     content () {
       return this.$t('biography')
     }
@@ -19,8 +36,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/style/media_mixin.scss";
+@import "~/assets/style/var.scss";
+
  section {
-   padding: 0 3rem;
    text-align: justify;
 
    /deep/ p {
@@ -32,7 +51,7 @@ export default {
    /deep/ h1 {
      font-size: 3rem;
      text-align: center;
-     color: rgb(0, 0, 114);
+     color: $main-blue;
      margin-bottom: 5rem;
    }
  }

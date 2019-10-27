@@ -5,7 +5,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Савельев Дмитрий Александрович - Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

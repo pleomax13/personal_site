@@ -5,9 +5,27 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 
 export default {
+  head () {
+    return {
+      title: this.titleHead
+    }
+  },
   components: {
+  },
+  computed: {
+    ...mapState({
+      lang: state => state.currentLang.lang
+    }),
+    titleHead () {
+      if (this.lang === 'en') {
+        return `Resume ${this.$t('titleHead')}`
+      }
+
+      return `Резюме ${this.$t('titleHead')}`
+    }
   }
 }
 </script>

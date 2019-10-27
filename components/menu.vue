@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -149,18 +149,36 @@ export default {
     path () {
       return this.$route.path
     }
+  },
+  watch: {
+    '$route.path' (to) {
+      this.toggleSidebar(false)
+    }
+  },
+  methods: {
+    ...mapMutations({
+      toggleSidebar: 'sidebar/SET_TOGGLE_SIDEBAR'
+    })
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/style/media_mixin.scss";
+
   .menu-wrap {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
-    min-height: 4rem;
-    flex-wrap: wrap;
-    padding: 0 3rem;
+
+    @include _1280 {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 4rem;
+      flex-wrap: wrap;
+      padding: 0 3rem;
+    }
   }
 
   .link {
@@ -169,7 +187,14 @@ export default {
     font-size: 2rem;
 
     &+& {
-      margin-left: 2.5rem;
+        margin-top: 1rem;
+      }
+
+    @include _1280 {
+      &+& {
+        margin-left: 2.5rem;
+        margin-top: 0;
+      }
     }
 
     &::after {
