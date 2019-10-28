@@ -76,7 +76,9 @@ export default {
     height: 100vh;
     width: 100%;
     max-width: 32rem;
+    background: url('../assets/imgs/bg_header.jpg') no-repeat center;
     background-color: $main-grey;
+    background-size: cover;
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -89,6 +91,19 @@ export default {
 
     &.show {
       left: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.7);
     }
   }
 

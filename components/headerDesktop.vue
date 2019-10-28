@@ -159,15 +159,30 @@ export default {
     &.fix,
     &.show {
       &::after {
-      content: '';
-      position: absolute;
-      left: -100%;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: $main-grey;
-      width: 500%;
-      z-index: -1;
+        content: '';
+        position: absolute;
+        left: -100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $main-grey;
+        background: url('../assets/imgs/bg_header.jpg') no-repeat center;
+        width: 500%;
+        background-size: cover;
+        z-index: -2;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: -100%;
+        right: 0;
+        width: 500%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.6);
       }
     }
   }
