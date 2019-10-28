@@ -39,6 +39,11 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: this.titleHead
+    }
+  },
   data () {
     return {
       articles: [
@@ -59,6 +64,11 @@ export default {
           sourceTitle: 'Донецкий национальный технический университет. Кафедра Электронной техники. Сайт магистра А.Е. Кочина.'
         }
       ]
+    }
+  },
+  computed: {
+    titleHead () {
+      return `Библиотека ${this.$t('titleHead')}`
     }
   }
 }
