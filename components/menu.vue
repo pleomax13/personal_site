@@ -1,11 +1,11 @@
 <template>
   <div class="menu-wrap">
     <nuxt-link
-      v-for="link in menu"
+      v-for="(link, i) in menu"
       :key="link.link"
       :to="link.link"
       class="link"
-      :class="{active: path === link.link.split('?')[0]}"
+      :class="{active: (i === 0 && path === 'index') || path === link.link.split('?')[0].split('/')[1]}"
     >
       {{ link.title }}
     </nuxt-link>
@@ -23,46 +23,6 @@ export default {
     ...mapState({
       lang: state => state.currentLang.lang
     }),
-    langBtns () {
-      const path = this.$route.path
-      if (this.lang === 'ru') {
-        switch (path) {
-          case '/':
-            return ['ua', 'en']
-          case '/biography':
-            return ['ua']
-          case '/abstract':
-            return ['ua', 'en']
-
-          default:
-            return []
-        }
-      } else if (this.lang === 'ua') {
-        switch (path) {
-          case '/':
-            return ['ru', 'en']
-          case '/biography':
-            return ['ru']
-          case '/abstract':
-            return ['ru', 'en']
-
-          default:
-            return []
-        }
-      } else if (this.lang === 'en') {
-        switch (path) {
-          case '/':
-            return ['ru', 'ua']
-          case '/abstract':
-            return ['ru', 'ua']
-
-          default:
-            return []
-        }
-      }
-
-      return []
-    },
     menu () {
       if (this.lang === 'ru') {
         return [
@@ -151,7 +111,7 @@ export default {
       ]
     },
     path () {
-      return this.$route.path
+      return this.$route.name
     }
   },
   watch: {

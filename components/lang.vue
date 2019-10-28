@@ -39,14 +39,14 @@ export default {
       lang: state => state.currentLang.lang
     }),
     langBtns () {
-      const path = this.$route.path
+      const path = this.$route.name
       if (this.lang === 'ru') {
         switch (path) {
-          case '/':
+          case 'index':
             return ['ua', 'en']
-          case '/biography':
+          case 'biography':
             return ['ua']
-          case '/abstract':
+          case 'abstract':
             return ['ua', 'en']
 
           default:
@@ -54,11 +54,11 @@ export default {
         }
       } else if (this.lang === 'ua') {
         switch (path) {
-          case '/':
+          case 'index':
             return ['ru', 'en']
-          case '/biography':
+          case 'biography':
             return ['ru']
-          case '/abstract':
+          case 'abstract':
             return ['ru', 'en']
 
           default:
@@ -66,9 +66,9 @@ export default {
         }
       } else if (this.lang === 'en') {
         switch (path) {
-          case '/':
+          case 'index':
             return ['ru', 'ua']
-          case '/abstract':
+          case 'abstract':
             return ['ru', 'ua']
 
           default:
