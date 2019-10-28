@@ -4,15 +4,19 @@ export default function ({ store, app, route, redirect }) {
 
   if (lang !== 'ru' && lang !== 'en' & lang !== 'ua') {
     lang = 'ru'
-    redirect(`/${path}/?lang=ru`)
+    if (path === 'index') {
+      redirect(`/?lang=ru`)
+    } else {
+      redirect(`/${path}?lang=ru`)
+    }
   }
 
   if (lang === 'en' && (path !== 'index' && path !== 'abstract')) {
-    redirect(`/${path}/?lang=ru`)
+    redirect(`/${path}?lang=ru`)
   }
 
   if (lang === 'ua' && (path !== 'index' && path !== 'abstract' && path !== 'biography')) {
-    redirect(`/${path}/?lang=ru`)
+    redirect(`/${path}?lang=ru`)
   }
 
   app.i18n.locale = lang
