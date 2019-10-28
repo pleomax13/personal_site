@@ -3,10 +3,11 @@
 </template>
 
 <style lang="scss" scoped>
+@import "~/assets/style/var.scss";
   section {
     background: url('../assets/imgs/bg_header.jpg') no-repeat center;
     background-size: cover;
-    background-color: gray;
+    background-color:  $main-grey;
     width: 100%;
     height: 15rem;
     margin: 0 auto;

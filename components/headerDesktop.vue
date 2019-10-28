@@ -206,7 +206,7 @@ export default {
     .photo-big {
       height: auto;
       width: 60vw;
-      max-width: 36rem;
+      max-width: 45rem;
       position: absolute;
       top: 0;
       bottom: 0;

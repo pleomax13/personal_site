@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    a
+    <h1>{{ title }}</h1>
+    <div class="resume-content" v-html="content" />
   </div>
 </template>
 
@@ -25,40 +26,73 @@ export default {
       }
 
       return `Резюме ${this.$t('titleHead')}`
+    },
+    content () {
+      return this.$t('resume.text')
+    },
+    title () {
+      return this.$t('resume.title')
     }
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss" scoped>
+@import "~/assets/style/media_mixin.scss";
+@import "~/assets/style/var.scss";
+  /deep/ h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: $main-blue;
+    margin-bottom: 5rem;
+  }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .resume-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 1.8rem;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+    @include tablet {
+      grid-template-columns: .5fr 2fr;
+      column-gap: 3rem;
+      row-gap: 1.5rem;
+    }
+  }
 
-.links {
-  padding-top: 15px;
-}
+  /deep/ p {
+    color: $main-blue;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 120%;
+
+    @include tablet {
+      text-align: right;
+      margin-bottom: 0;
+    }
+  }
+
+  /deep/ span {
+    margin-bottom: 3rem;
+    line-height: 120%;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  /deep/ a {
+    text-decoration: none;
+    color: $second-blue;
+    margin: 0 auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include tablet {
+      margin: 0;
+    }
+  }
 </style>
