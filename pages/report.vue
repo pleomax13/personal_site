@@ -344,6 +344,7 @@ export default {
     color: $main-blue;
     margin-bottom: 2rem;
     margin-top: 3rem;
+    text-align: center;
   }
  }
 
