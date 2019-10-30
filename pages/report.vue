@@ -346,4 +346,9 @@ export default {
     margin-top: 3rem;
   }
  }
+
+ .app-table {
+   max-width: 160rem;
+   margin: auto;
+ }
  </style>
