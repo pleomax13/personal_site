@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import footer from '~/components/footer.vue'
 import headerDesktop from '~/components/headerDesktop.vue'
 import headerMobile from '~/components/headerMobile.vue'
@@ -20,12 +20,13 @@ export default {
   },
   data () {
     return {
-      device: 'mobile'
+      // device: 'mobile'
     }
   },
   computed: {
     ...mapState({
-      lang: state => state.currentLang.lang
+      lang: state => state.currentLang.lang,
+      device: state => state.device.device
     }),
     headerComponent () {
       if (this.device === 'desktop') {
@@ -43,16 +44,19 @@ export default {
     })
   },
   methods: {
+    ...mapMutations({
+      setCurrentDevice: 'device/SET_DEVICE'
+    }),
     setDevice () {
       if (process.client) {
         const width = document.documentElement.clientWidth
 
         if (width >= 1280) {
-          this.device = 'desktop'
+          this.setCurrentDevice('desktop')
         } else if (width >= 768) {
-          this.device = 'tablet'
+          this.setCurrentDevice('tablet')
         } else {
-          this.device = 'mobile'
+          this.setCurrentDevice('mobile')
         }
       }
     }

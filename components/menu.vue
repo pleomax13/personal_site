@@ -48,7 +48,7 @@ export default {
           },
           {
             link: '/report?lang=ru',
-            title: 'Отчет'
+            title: 'Отчет о поиске'
           },
           {
             link: '/individual?lang=ru',
@@ -102,7 +102,7 @@ export default {
         },
         {
           link: '/report',
-          title: 'Отчет'
+          title: 'Отчет о поиске'
         },
         {
           link: '/individual',
