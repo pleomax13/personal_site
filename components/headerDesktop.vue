@@ -60,7 +60,7 @@ export default {
 
       if (bottom <= 0 && this.fixMenu === false) {
         this.fixMenu = true
-      } else if (topHeader >= -this.menuTop && this.fixMenu === true) {
+      } else if (topHeader >= -Math.abs(this.menuTop) && this.fixMenu === true) {
         this.fixMenu = false
         this.showMenu = false
       }
