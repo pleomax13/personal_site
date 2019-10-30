@@ -62,6 +62,14 @@ export default {
           author: ['М.Г. Хламов', 'А.Е.Кочин'],
           source: 'http://masters.donntu.org/2000/fkita/kochin/statya.htm',
           sourceTitle: 'Донецкий национальный технический университет. Кафедра Электронной техники. Сайт магистра А.Е. Кочина.'
+        },
+        {
+          link: '/library/article-3',
+          title: 'Способ защиты стекол от запыления оптического измерителя концентрации метана в угольных шахтах',
+          desc: 'Разработан и реализован способ защиты стекол от запыления оптического измерителя концентрации метана в угольных шахтах.',
+          author: ['А.В. Вовна'],
+          source: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?I21DBN=LINK&P21DBN=UJRN&Z21ID=&S21REF=10&S21CNR=20&S21STN=1&S21FMT=ASP_meta&C21COM=S&2_S21P03=FILA=&2_S21STR=Npdntu_ota_2015_1_17',
+          sourceTitle: 'Национальная библиотека Украины имени В.И. Вернадского.'
         }
       ]
     }
@@ -88,8 +96,8 @@ export default {
   h2 {
     font-size: 2rem;
     color: $main-blue;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 
     ol {

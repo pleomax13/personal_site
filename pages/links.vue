@@ -399,8 +399,8 @@ export default {
   h2 {
     font-size: 2rem;
     color: $main-blue;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
 
   ol {
@@ -417,7 +417,7 @@ export default {
 
     a {
       text-decoration: none;
-      display: block;
+      display: inline-flex;
       margin-bottom: 1rem;
       font-weight: 500;
 

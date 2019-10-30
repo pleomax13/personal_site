@@ -184,4 +184,13 @@ export default {
     left: -1px;
     width: calc(100% + 2px);
   }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+  }
 </style>

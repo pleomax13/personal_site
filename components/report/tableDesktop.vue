@@ -141,4 +141,13 @@ export default {
     color: $main-blue;
     padding: 2rem 1rem 1rem;
   }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+  }
 </style>
