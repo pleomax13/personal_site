@@ -134,6 +134,7 @@ export default {
 
   .c1 {
     padding: 1rem;
+    text-align: left;
   }
 
   .lang {
