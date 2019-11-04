@@ -1,8 +1,8 @@
 <template>
   <section>
-    <h1>Front-end разработка</h1>
+    <h1>Frontend разработка</h1>
     <p>
-      Веб-разработкой, в частности front-end, я занимаюсь уже достаточно долго.
+      Веб-разработкой, в частности frontend, я занимаюсь уже достаточно долго.
       Началось всё с того, что мне захотелось научиться разрабатывать сайты. Для этого я начал изучать основы верстки,
       в частности HTML и CSS.
     </p>
@@ -388,8 +388,10 @@ export default {
       ]
     }
   },
-  titleHead () {
-    return `Front-end разработка ${this.$t('titleHead')}`
+  computed: {
+    titleHead () {
+      return `Frontend разработка ${this.$t('titleHead')}`
+    }
   }
 }
 </script>
