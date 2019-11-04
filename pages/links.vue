@@ -376,9 +376,6 @@ export default {
     }
   },
   computed: {
-    ...mapState({
-      lang: state => state.currentLang.lang
-    }),
     titleHead () {
       return `Ссылки ${this.$t('titleHead')}`
     }

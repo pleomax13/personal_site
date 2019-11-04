@@ -267,6 +267,11 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: this.titleHead
+    }
+  },
   data () {
     return {
       react: [
@@ -382,6 +387,9 @@ export default {
         }
       ]
     }
+  },
+  titleHead () {
+    return `Front-end разработка ${this.$t('titleHead')}`
   }
 }
 </script>

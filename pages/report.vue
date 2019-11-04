@@ -300,8 +300,7 @@ export default {
   },
   computed: {
     ...mapState({
-      device: state => state.device.device,
-      lang: state => state.currentLang.lang
+      device: state => state.device.device
     }),
     titleHead () {
       return `Отчет о поиске ${this.$t('titleHead')}`
