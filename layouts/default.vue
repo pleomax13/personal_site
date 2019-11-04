@@ -49,7 +49,8 @@ export default {
     }),
     setDevice () {
       if (process.client) {
-        const width = document.documentElement.clientWidth
+        // const width = document.documentElement.clientWidth
+        const width = window.innerWidth
 
         if (width >= 1280) {
           this.setCurrentDevice('desktop')

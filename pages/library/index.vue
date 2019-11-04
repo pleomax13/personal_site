@@ -64,6 +64,43 @@
           <span v-else class="source-title">{{ link.sourceTitle }}</span>
         </p>
       </li>
+      <h2>Переводы статей</h2>
+      <li>
+        <nuxt-link to="/library/article-5">
+          Бюджетный усилитель с фотодиодом для обнаружения альфа-частиц
+        </nuxt-link>
+        <p>
+          <span>Авторы:</span>
+          <span class="name">
+            Cláudio Domienikan,
+          </span>
+          <span class="name">
+            Priscila Costa,
+          </span>
+          <span class="name">
+            Frederico A. Genezini,
+          </span>
+          <span class="name">
+            Guilherme S. Zahn
+          </span>
+        </p>
+        <p>
+          <span>Автор перевода:</span>
+          <span class="name">
+            Савельев Д.А.
+          </span>
+        </p>
+        <p>
+          <span>Описание:</span>
+          Представлен недорогой усилитель для фотодиода Hamamatsu S3590-09 PIN, который будет использоваться для обнаружения альфа-частиц.
+        </p>
+        <p class="source">
+          <span>Источник:</span>
+          <a href="https://inis.iaea.org/collection/NCLCollectionStore/_Public/49/018/49018135.pdf" target="_blank">
+            International Nuclear Information System (INIS)
+          </a>
+        </p>
+      </li>
     </ol>
   </section>
 </template>

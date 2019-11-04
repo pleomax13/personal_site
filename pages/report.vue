@@ -340,7 +340,7 @@ export default {
    }
 
    h2 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     color: $main-blue;
     margin-bottom: 2rem;
     margin-top: 3rem;

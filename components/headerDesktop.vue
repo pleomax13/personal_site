@@ -58,7 +58,7 @@ export default {
       const topHeader = this.$el.getBoundingClientRect().top
       const bottom = this.menuEl.getBoundingClientRect().bottom
 
-      if (this.fixMenu) {
+      if (this.fixMenu && this.$el.querySelector('.menu-bg')) {
         this.menuTop = this.$el.querySelector('.menu-bg').getBoundingClientRect().top + pageYOffset
       }
 

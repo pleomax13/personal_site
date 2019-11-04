@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <img src="~/assets/imgs/saveliev_big.jpg" alt="" class="photo" @click="showModal">
+    <img src="~/assets/imgs/saveliev_big.jpg" :alt="mainInfo.name" :title="mainInfo.name" class="photo" @click="showModal">
     <div class="content-wrap">
       <h1>
         {{ mainInfo.name }}
@@ -41,9 +41,9 @@ export default {
           name: 'Савельев Дмитрий Александрович',
           dep: 'Факультет компьютерных информационных технологий и автоматики',
           caf: 'Кафедра эелектронной техники',
-          specialty: 'Специальность <q>Эелектроника и наноэлектроника</q>',
+          specialty: 'Специальность <q>Электроника и наноэлектроника</q>',
           topic: 'Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра',
-          head: 'Научный руководитель: к.т.н., проф. Хламов Михаил Георгиевич'
+          head: 'Научный руководитель: д.т.н., проф. Хламов Михаил Георгиевич'
         }
       } else if (this.lang === 'ua') {
         return {
@@ -52,7 +52,7 @@ export default {
           caf: 'Кафедра електронної техніки',
           specialty: 'Спеціальність <q>Електроніка та наноелектроніка</q>',
           topic: 'Дослідження і розробка методів і засобів метрологічної надійності оптичного адсорбционного шахтного метанометра',
-          head: 'Науковий керівник: к.т.н., проф. Хламов Михайло Георгійович'
+          head: 'Науковий керівник: д.т.н., проф. Хламов Михайло Георгійович'
         }
       } else if (this.lang === 'en') {
         return {
@@ -61,7 +61,7 @@ export default {
           caf: 'Department of electronic engineering',
           specialty: 'Speciality <q>Electronics and nanoelectronics</q>',
           topic: 'Research and development of methods and means of metrological reliability of an optical adsorption mine methanometer',
-          head: 'Scientific adviser: Candidate of Engineering Sciences, Professor Khlamov Michael G.'
+          head: 'Scientific adviser: Scientific adviser: Doctor of Engineering Sciences, Professor Michael Khlamov'
         }
       }
       return {
@@ -70,7 +70,7 @@ export default {
         caf: 'Кафедра эелектронной техники',
         specialty: 'Специальность <q>Эелектроника и наноэлектроника</q>',
         topic: 'Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра',
-        head: 'Научный руководитель: к.т.н., проф. Хламов Михаил Георгиевич'
+        head: 'Научный руководитель: д.т.н., проф. Хламов Михаил Георгиевич'
       }
     }
   },
