@@ -2,6 +2,10 @@ export default function ({ store, app, route, redirect }) {
   let lang = route.query.lang ? route.query.lang : 'ru'
   const path = route.name
 
+  if (path === null) {
+    redirect('/?lang=ru')
+  }
+
   if (lang !== 'ru' && lang !== 'en' & lang !== 'ua') {
     lang = 'ru'
     if (path === 'index') {
