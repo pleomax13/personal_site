@@ -20,7 +20,7 @@ export default {
       lang: state => state.currentLang.lang
     }),
     titleHead () {
-      if (this.lang === 'ua') {
+      if (this.lang === 'uk') {
         return `Біографія ${this.$t('titleHead')}`
       }
 

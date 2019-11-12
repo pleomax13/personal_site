@@ -63,6 +63,9 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, { isDev, isClient }) {
+      // if (!isDev) {
+      //   config.output.publicPath = './_nuxt/'
+      // }
     },
     postcss: {
       // Add plugin names as key and arguments as value

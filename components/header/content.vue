@@ -6,10 +6,14 @@
         {{ mainInfo.name }}
       </h1>
       <h3>
-        {{ mainInfo.dep }}
+        <a href="http://fkita.donntu.org/" target="_blank">
+          {{ mainInfo.dep }}
+        </a>
       </h3>
       <h3>
-        {{ mainInfo.caf }}
+        <a href="http://ket.fkita.donntu.org/" target="_blank">
+          {{ mainInfo.caf }}
+        </a>
       </h3>
 
       <h3 v-html="mainInfo.specialty" />
@@ -45,7 +49,7 @@ export default {
           topic: 'Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра',
           head: 'Научный руководитель: д.т.н., проф. Хламов Михаил Георгиевич'
         }
-      } else if (this.lang === 'ua') {
+      } else if (this.lang === 'uk') {
         return {
           name: 'Савельєв Дмитро Олександрович',
           dep: "Факультет комп'ютерних інформаційних технологій та автоматики",
@@ -127,9 +131,12 @@ export default {
 
   h1 {
     margin-bottom: 2.5rem;
-    font-size: 2.5rem
+    font-size: 2.5rem;
   }
 
+    a {
+      color: white;
+    }
   h3 {
     margin-bottom: 1.5rem;
     font-weight: 400;

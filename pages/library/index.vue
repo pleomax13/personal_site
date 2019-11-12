@@ -1,7 +1,7 @@
 <template>
   <section>
     <h1>Библиотека материалов по теме выпускной работы</h1>
-    <h2>Собственные публикации и доклады</h2>
+    <!-- <h2>Собственные публикации и доклады</h2> -->
     <ol>
       <h2>Тематические статьи</h2>
       <li
@@ -66,7 +66,7 @@
       </li>
       <h2>Переводы статей</h2>
       <li>
-        <nuxt-link to="/library/article-5">
+        <nuxt-link to="/library/article-10">
           Бюджетный усилитель с фотодиодом для обнаружения альфа-частиц
         </nuxt-link>
         <p>
@@ -170,6 +170,22 @@ export default {
           desc: 'Разработка и реализация оптического измерителя концентрации метана.',
           author: ['А. В. Вовна,', 'А. А. Зори'],
           source: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?I21DBN=LINK&P21DBN=UJRN&Z21ID=&S21REF=10&S21CNR=20&S21STN=1&S21FMT=ASP_meta&C21COM=S&2_S21P03=FILA=&2_S21STR=Npdntu_ota_2014_1_24',
+          sourceTitle: 'Национальная библиотека Украины имени В.И. Вернадского.'
+        },
+        {
+          link: '/personal_site/article-8.pdf',
+          title: 'Волоконно-оптичний датчик метану',
+          desc: 'Предложено новое решение волоконно-оптического датчика метана.',
+          author: ['Ю. М. Цюпко'],
+          source: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?I21DBN=LINK&P21DBN=UJRN&Z21ID=&S21REF=10&S21CNR=20&S21STN=1&S21FMT=ASP_meta&C21COM=S&2_S21P03=FILA=&2_S21STR=Npchduct_2016_283_271_16',
+          sourceTitle: 'Национальная библиотека Украины имени В.И. Вернадского.'
+        },
+        {
+          link: '/personal_site/article-9.pdf',
+          title: 'Разработка и обоснование структуры измерительной системы контроля взрывоопасных пыле-газовых смесей в шахтной выработке.',
+          desc: 'Разработка и реализация оптического измерителя концентрации метана.',
+          author: ['Р. І. Соломічев,', 'О. В. Вовна,', 'А. А. Зорі'],
+          source: 'http://www.irbis-nbuv.gov.ua/cgi-bin/irbis_nbuv/cgiirbis_64.exe?I21DBN=LINK&P21DBN=UJRN&Z21ID=&S21REF=10&S21CNR=20&S21STN=1&S21FMT=ASP_meta&C21COM=S&2_S21P03=FILA=&2_S21STR=vcpie_2014_19_18',
           sourceTitle: 'Национальная библиотека Украины имени В.И. Вернадского.'
         }
       ]

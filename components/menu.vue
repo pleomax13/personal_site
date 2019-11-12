@@ -55,18 +55,18 @@ export default {
             title: 'Индивидуальный раздел'
           }
         ]
-      } else if (this.lang === 'ua') {
+      } else if (this.lang === 'uk') {
         return [
           {
-            link: '/?lang=ua',
+            link: '/?lang=uk',
             title: 'Резюме'
           },
           {
-            link: '/biography?lang=ua',
+            link: '/biography?lang=uk',
             title: 'Біографія'
           },
           {
-            link: '/abstract?lang=ua',
+            link: '/abstract?lang=uk',
             title: 'Реферат'
           }
         ]

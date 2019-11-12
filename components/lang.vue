@@ -8,20 +8,20 @@
         class="lang"
       >
         <img v-if="btn === 'ru'" src="~/assets/imgs/icons/ru.svg" alt="Русский" class="lang-img">
-        <img v-else-if="btn === 'ua'" src="~/assets/imgs/icons/ua.svg" alt="Українська" title="Українська" class="lang-img">
+        <img v-else-if="btn === 'uk'" src="~/assets/imgs/icons/ua.svg" alt="Українська" title="Українська" class="lang-img">
         <img v-else-if="btn === 'en'" src="~/assets/imgs/icons/en.svg" alt="English" title="English" class="lang-img">
       </nuxt-link>
       <!-- <img src="/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleSidebar(false)"> -->
     </div>
     <div class="links-wrap">
       <a target="_blank" href="http://donntu.org/" class="link">
-        <span v-if="lang ==='ru' || lang === 'ua'">ДонНТУ</span>
+        <span v-if="lang ==='ru' || lang === 'uk'">ДонНТУ</span>
         <span v-if="lang ==='en'">DonNTU</span>
       </a>
       <a v-if="lang ==='ru'" target="_blank" href="http://masters.donntu.org" class="link">
         Портал магистров
       </a>
-      <a v-if="lang ==='ua'" target="_blank" href="http://masters.donntu.org/indexu.htm" class="link">
+      <a v-if="lang ==='uk'" target="_blank" href="http://masters.donntu.org/indexu.htm" class="link">
         Портал магістрів
       </a>
       <a v-if="lang ==='en'" target="_blank" href="http://masters.donntu.org/indexe.htm" class="link">
@@ -43,16 +43,16 @@ export default {
       if (this.lang === 'ru') {
         switch (path) {
           case 'index':
-            return ['ua', 'en']
+            return ['uk', 'en']
           case 'biography':
-            return ['ua']
+            return ['uk']
           case 'abstract':
-            return ['ua', 'en']
+            return ['uk', 'en']
 
           default:
             return []
         }
-      } else if (this.lang === 'ua') {
+      } else if (this.lang === 'uk') {
         switch (path) {
           case 'index':
             return ['ru', 'en']
@@ -67,9 +67,9 @@ export default {
       } else if (this.lang === 'en') {
         switch (path) {
           case 'index':
-            return ['ru', 'ua']
+            return ['ru', 'uk']
           case 'abstract':
-            return ['ru', 'ua']
+            return ['ru', 'uk']
 
           default:
             return []

@@ -6,7 +6,7 @@ export default function ({ store, app, route, redirect }) {
     redirect('/?lang=ru')
   }
 
-  if (lang !== 'ru' && lang !== 'en' & lang !== 'ua') {
+  if (lang !== 'ru' && lang !== 'en' & lang !== 'uk') {
     lang = 'ru'
     if (path === 'index') {
       redirect(`/?lang=ru`)
@@ -19,7 +19,7 @@ export default function ({ store, app, route, redirect }) {
     redirect(`/${path}?lang=ru`)
   }
 
-  if (lang === 'ua' && (path !== 'index' && path !== 'abstract' && path !== 'biography')) {
+  if (lang === 'uk' && (path !== 'index' && path !== 'abstract' && path !== 'biography')) {
     redirect(`/${path}?lang=ru`)
   }
 

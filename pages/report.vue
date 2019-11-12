@@ -695,4 +695,12 @@ export default {
  ul {
    font-size: 1.8rem;
  }
+
+   a {
+    text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+  }
  </style>
