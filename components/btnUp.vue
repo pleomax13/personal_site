@@ -50,5 +50,6 @@ export default {
   .img {
     width: 60%;
     height: auto;
+    pointer-events: none;
   }
 </style>
