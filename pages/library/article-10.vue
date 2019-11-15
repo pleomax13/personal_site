@@ -3,7 +3,11 @@
     <h1>Бюджетный усилитель с фотодиодом для обнаружения альфа-частиц</h1>
     <p class="subtitle-wrap">
       <span class="subtitle">Авторы: </span>
-      Cláudio Domienikan, Priscila Costa, Frederico A. Genezini, Guilherme S. Zahn
+      Cláudio&nbsp;Domienikan, Priscila&nbsp;Costa, Frederico&nbsp;A.&nbsp;Genezini, Guilherme&nbsp;S&nbsp;Zahn
+    </p>
+    <p class="subtitle-wrap">
+      <span class="subtitle">Автор перевода: </span>
+      Савельев&nbsp;Д.А.
     </p>
     <p class="subtitle-wrap">
       <span class="subtitle">Источник:</span>
@@ -14,7 +18,7 @@
     <h3>Аннотация</h3>
     <p class="annotation">
       <span class="subtitle">
-        Cláudio Domienikan, Priscila Costa, Frederico A. Genezini, Guilherme S. Zahn.
+        Cláudio&nbsp;Domienikan, Priscila&nbsp;Costa, Frederico&nbsp;A.&nbsp;Genezini, Guilherme&nbsp;S&nbsp;Zahn.
         Бюджетный усилитель с фотодиодом для обнаружения альфа-частиц.
       </span>
       <i>
@@ -212,51 +216,51 @@
       15 долларов США с использованием только общедоступных компонентов.
     </p>
     <h3>ЛИТЕРАТУРА</h3>
-    <p>
-      1.  C. C. Bueno, J. A. C. Gonçalves, M. D. de S. Santos, “The performance of low-cost
+    <p class="left">
+      1.  C.C.&nbsp;Bueno, J.A.C.&nbsp;Gonçalves, M.D.&nbsp;de&nbsp;S.&nbsp;Santos, “The performance of low-cost
       commercial photodiodes for charged particle and X-ray spectrometry”, Nuclear
       Instruments and Methods in Physics Research A, 371, pp.460-464 (1996).
     </p>
-    <p>
-      2.   R. L. Owen, J. M. Holton, C. Schulze-Briese, E. F. Garman. “Determination of X-ray flux
+    <p class="left">
+      2.   R.L.&nbsp;Owen, J.M.&nbsp;Holton, C.&nbsp;Schulze-Briese, E.F.&nbsp;Garman. “Determination of X-ray flux
       using silicon pin diodes”, J Synchrotron Radiat., 16(Pt 2), pp 143-151 (2009).
     </p>
-    <p>
-      3. C. N. P. Oliveira, H. J. Khoury, E. J. P. Santos, “PiN photodiode performance comparison
+    <p class="left">
+      3. C.N.P&nbsp;Oliveira, H.J.&nbsp;Khoury, E.J.P.&nbsp;Santos, “PiN photodiode performance comparison
       for dosimetry in radiology applications”, Physica Medica, 32 pp. 1495-1501 (2016).
     </p>
-    <p>
-      4.P. H. Gooda, W. B. Gilboy, “High resolution alpha spectroscopy with low cost
+    <p class="left">
+      4.P.H.&nbsp;Gooda, W.B.&nbsp;Gilboy, “High resolution alpha spectroscopy with low cost
       photodiodes”, Nuclear Instruments and Methods in Physics Research A, 255, pp.222-224
       (1987).
     </p>
-    <p>
-      5. R. Nowotny, W. L. Reiter, “The use of silicon pin-photodiodes as a low-energy
+    <p class="left">
+      5. R.&nbsp;Nowotny, W.L.&nbsp;Reiter, “The use of silicon pin-photodiodes as a low-energy
       photonspectrometer”, Nuclear Instruments and Methods in Physics Research A, 147,
       pp.477-480 (1977).
     </p>
-    <p>
-      6. D. Renker, E. Lorenz, “Advances in solid state photon detectors”, Journal of
+    <p class="left">
+      6. D.&nbsp;Renker, E.&nbsp;Lorenz, “Advances in solid state photon detectors”, Journal of
       Instrumentation, 4, P04004 (2009).
     </p>
-    <p>
-      7. P. Costa, M. P. Raele, H. Yoriyaz, P. T. D. Siqueira, G. S. Zahn, F. A. Genezini, “Boron
+    <p class="left">
+      7. P.&nbsp;Costa, M.P.&nbsp;Raele, H.&nbsp;Yoriyaz, P.T.D.&nbsp;Siqueira, G.S.&nbsp;Zahn, F.A.&nbsp;Genezini, “Boron
       Film Thickness Determination To Develop A Low Cost Neutron Using Monte Carlo
       Method,” Proceedings of the 2015 International Nuclear Atlantic Conference, São Paulo,
       October 4-9 (2015).
     </p>
-    <p>
+    <p class="left">
       8. <q>SI PIN Photodiode</q>, <a
         href="https://www.hamamatsu.com/resources/pdf/ssd/s3590-08_etc_kpin1052e.pdf"
         target="_blank"
       >https://www.hamamatsu.com/resources/pdf/ssd/s3590-
         08_etc_kpin1052e.pdf</a> (2012).
     </p>
-    <p>
+    <p class="left">
       9. <q>Table de Radionocléides</q>, http://www.nucleide.org/DDEP_WG/DDEPdata.htm (2017).
     </p>
-    <p>
-      10. P. Gouffon, <q>Manual do programa IDEFIX</q>, USP, São Paulo, 1987.
+    <p class="left">
+      10. P.&nbsp;Gouffon, <q>Manual do programa IDEFIX</q>, USP, São Paulo, 1987.
     </p>
   </section>
 </template>
@@ -297,7 +301,11 @@ export default {
     font-size: 1.7rem;
     text-indent: 2.5rem;
     line-height: 150%;
-    text-align: justify;
+    text-align: left;
+
+    @include tablet {
+      text-align: justify;
+    }
 
     &+& {
       margin-top: .5rem;

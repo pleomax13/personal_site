@@ -40,7 +40,11 @@ export default {
 @import "~/assets/style/var.scss";
 
  section {
-   text-align: justify;
+   text-align: left;
+
+  @include tablet {
+    text-align: justify;
+  }
 
    /deep/ p {
      font-size: 1.8rem;

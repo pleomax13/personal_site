@@ -27,6 +27,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ @import "~/assets/style/media_mixin.scss";
+
 .container-icon {
   cursor: pointer;
   width: 3.5rem;
@@ -37,8 +39,16 @@ export default {
   &.change {
     background: transparent;
 
+    @include tablet {
+      background: white;
+    }
+
     .bar1, .bar2, .bar3 {
       background: white;
+
+      @include tablet {
+        background: black;
+      }
     }
   }
 }
@@ -53,12 +63,12 @@ export default {
 }
 
 .change .bar1 {
-  transform: rotate(-45deg) translate(-.5rem, .6rem);
+  transform: rotate(-45deg) translate(-.6rem, .55rem);
 }
 
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
-  transform: rotate(45deg) translate(-.5rem, -.6rem);
+  transform: rotate(45deg) translate(-.6rem, -.55rem);
 }
 </style>

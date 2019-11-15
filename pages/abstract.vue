@@ -469,29 +469,34 @@
     <p class="source">
       1.
       <!-- Термокаталитические (термохимические) сенсоры. [Электронный ресурс] – Режим доступа: -->
-      {{ abstract.sources.s1 }}
+      <!-- {{ abstract.sources.s1 }} -->
+      <span v-html=" abstract.sources.s1"/>
       <a href="http://www.sensorgas.ru/poleznoe.html&art=8" target="_blank">http://www.sensorgas.ru/poleznoe.html&art=8</a>
     </p>
     <p class="source">
       2.
       <!-- Термокондуктометрический метод измерения концентрации газов. [Электронный ресурс] – -->
       <!-- Режим доступа:  -->
-      {{ abstract.sources.s2 }}
+      <!-- {{ abstract.sources.s2 }} -->
+      <span v-html=" abstract.sources.s2"/>
       <a href="http://ural-test.ru/help/articles/termo-konduktometricheskiy-metod/" target="_blank">http://ural-test.ru/help/articles/termo-konduktometricheskiy-metod/</a>
     </p>
     <p class="source">
       3.
-      {{ abstract.sources.s3 }}
+      <!-- {{ abstract.sources.s3 }} -->
+      <span v-html=" abstract.sources.s3"/>
       <!-- Бреслер П.И. Оптические абсорбционные газоанализаторы и их применение. – Л.: Энергия, 1980. – 164 с. -->
     </p>
     <p class="source">
       4.
-      {{ abstract.sources.s4 }}
+      <!-- {{ abstract.sources.s4 }} -->
+      <span v-html=" abstract.sources.s4"/>
       <!-- Карпов Е.Ф., Биренберг И.Э. Автоматическая газовая защита и контроль рудничной атмосферы. – М.: Наука, 1984. – 285с. -->
     </p>
     <p class="source">
       5.
-      {{ abstract.sources.s5 }}
+      <!-- {{ abstract.sources.s5 }} -->
+      <span v-html=" abstract.sources.s5"/>
       <!-- ГОСТ 24032 – 80. Приборы шахтные газоаналитические. Общие требования, методы
       испытания. – Введ. 01. 01. 1981 /Межгосударственный стандарт. – М.: Издательство
       стандартов, 1980. – 36 с. – (Угольная промышленность). -->
@@ -499,13 +504,15 @@
     <p class="source">
       6.
       <!-- IBSG [Електронний ресурс]. – Електронные данные. – Режим доступа: -->
-      {{ abstract.sources.s6 }}
+      <!-- {{ abstract.sources.s6 }} -->
+      <span v-html=" abstract.sources.s6"/>
       <a href="http://www.ibsg-st-petersburg.com" target="_blank">http://www.ibsg-st-petersburg.com</a>.
     </p>
     <p class="source">
       7.
       <!-- Энергетика [Електронний ресурс]. – Електронные данные. – Режим доступа: -->
-      {{ abstract.sources.s7 }}
+      <span v-html=" abstract.sources.s7"/>
+      <!-- {{ abstract.sources.s7 }} -->
       <a href="http://energetika.in.ua/ru/books/book-1/part-2/section-7/7-5" target="_blank">http://energetika.in.ua/ru/books/book-1/part-2/section-7/7-5</a>.
     </p>
   </section>
@@ -554,8 +561,12 @@ export default {
 @import "~/assets/style/var.scss";
 
 section {
-   text-align: justify;
+   text-align: left;
    font-size: 1.8rem;
+
+   @include tablet {
+    text-align: justify;
+   }
 
    /deep/ p {
      font-size: 1.8rem;

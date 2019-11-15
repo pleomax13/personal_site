@@ -401,9 +401,13 @@ export default {
 @import "~/assets/style/media_mixin.scss";
 
   section {
-   text-align: justify;
+   text-align: left;
    font-size: 1.8rem;
    line-height: 2.6rem;
+
+   @include tablet {
+    text-align: justify;
+   }
 
    p {
      font-size: 1.8rem;
