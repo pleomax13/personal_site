@@ -109,7 +109,7 @@
       устройства определения концентрации метана, представленная на рисунке 1. -->
     </p>
     <div class="chart-wrap">
-      <img src="~/assets/imgs/abs_1.png" alt="Обобщенная структурная схема спектрального устройства" class="chart">
+      <img src="~/assets/imgs/abs_1.png" :alt="abstract.p3.p2" :title="abstract.p3.p2" class="chart">
       <p>
         {{ abstract.picture }} 1 – {{ abstract.p3.p2 }}
       </p>
@@ -167,9 +167,9 @@
       Общий вид и состав термокаталитического сенсора приведен на рисунке 2 [1].
     </p> -->
     <div class="chart-wrap">
-      <img v-if="lang === 'ru'" src="~/assets/imgs/abs_2_ru.jpg" :alt="abstract.p4.p2" class="chart">
-      <img v-if="lang === 'uk'" src="~/assets/imgs/abs_2_uk.jpg" :alt="abstract.p4.p2" class="chart">
-      <img v-if="lang === 'en'" src="~/assets/imgs/abs_2_en.jpg" :alt="abstract.p4.p2" class="chart">
+      <img v-if="lang === 'ru'" src="~/assets/imgs/abs_2_ru.jpg" :alt="abstract.p4.p2" :title="abstract.p4.p2" class="chart">
+      <img v-if="lang === 'uk'" src="~/assets/imgs/abs_2_uk.jpg" :alt="abstract.p4.p2" :title="abstract.p4.p2" class="chart">
+      <img v-if="lang === 'en'" src="~/assets/imgs/abs_2_en.jpg" :alt="abstract.p4.p2" :title="abstract.p4.p2" class="chart">
       <p>
         <!-- Рисунок 2 – Общий вид и состав термокаталитического сенсора -->
         {{ abstract.picture }} 2 – {{ abstract.p4.p2 }}
@@ -187,9 +187,9 @@
       {{ abstract.p5.p1 }}
     </p>
     <div class="chart-wrap">
-      <img v-if="lang === 'ru'" src="~/assets/imgs/abs_3_ru.jpg" :alt="abstract.p5.p2" class="chart">
-      <img v-if="lang === 'uk'" src="~/assets/imgs/abs_3_uk.jpg" :alt="abstract.p5.p2" class="chart">
-      <img v-if="lang === 'en'" src="~/assets/imgs/abs_3_en.jpg" :alt="abstract.p5.p2" class="chart">
+      <img v-if="lang === 'ru'" src="~/assets/imgs/abs_3_ru.jpg" :alt="abstract.p5.p2" :title="abstract.p5.p2" class="chart">
+      <img v-if="lang === 'uk'" src="~/assets/imgs/abs_3_uk.jpg" :alt="abstract.p5.p2" :title="abstract.p5.p2" class="chart">
+      <img v-if="lang === 'en'" src="~/assets/imgs/abs_3_en.jpg" :alt="abstract.p5.p2" :title="abstract.p5.p2" class="chart">
       <p>
         <!-- Рисунок 3 – Обобщенная схема включения термокаталитического сенсора -->
         {{ abstract.picture }} 3 – {{ abstract.p5.p2 }}
@@ -206,7 +206,7 @@
       <!-- {{ abstract.p6.p1 }} -->
     </p>
     <div class="chart-wrap">
-      <img src="~/assets/imgs/abs_4.png" :alt="abstract.p6.p2" class="chart">
+      <img src="~/assets/imgs/abs_4.png" :alt="abstract.p6.p2" :title="abstract.p6.p2" class="chart">
       <p>
         <!-- Рисунок 4 – Обобщенная схема термокондуктометрического сенсора -->
         {{ abstract.picture }} 4 – {{ abstract.p6.p2 }}
@@ -300,7 +300,7 @@
       {{ abstract.where }}
       <p>
         <span class="formula-font">I<sub>0</sub></span>,
-        <span class="formula-font">I</span> – {{ abstract.p12 }}
+        <span class="formula-font">I</span> {{ abstract.p12 }}
         <span class="formula-font">l</span>.
       </p>
     </div>
@@ -414,12 +414,14 @@
       {{ abstract.p21.p1 }}
     </p>
     <div class="chart-wrap">
-      <img src="~/assets/imgs/gif.gif" :alt="abstract.p21.p2" class="chart">
+      <img v-if="lang === 'ru'" src="~/assets/imgs/gif.gif" :alt="abstract.p21.p2" :title="abstract.p21.p2" class="chart">
+      <img v-if="lang === 'uk'" src="~/assets/imgs/gif_uk.png" :alt="abstract.p21.p2" :title="abstract.p21.p2" class="chart">
+      <img v-if="lang === 'en'" src="~/assets/imgs/gif_en.png" :alt="abstract.p21.p2" :title="abstract.p21.p2" class="chart">
       <p>
         <!-- Рисунок 2 – Анимация оптических каналов измерителя концентрации метана -->
         {{ abstract.picture }} 5 – {{ abstract.p21.p2 }}
       </p>
-      <p>
+      <p v-if="lang !== 'en'">
         <!-- Анимация: количество кадров – 5;
         задержка между кадрами - 1 с; количество циклов повторения – 10; объём – 34 кБ -->
         {{ abstract.p21.p3 }}
@@ -470,7 +472,7 @@
       1.
       <!-- Термокаталитические (термохимические) сенсоры. [Электронный ресурс] – Режим доступа: -->
       <!-- {{ abstract.sources.s1 }} -->
-      <span v-html=" abstract.sources.s1"/>
+      <span v-html=" abstract.sources.s1" />
       <a href="http://www.sensorgas.ru/poleznoe.html&art=8" target="_blank">http://www.sensorgas.ru/poleznoe.html&art=8</a>
     </p>
     <p class="source">
@@ -478,25 +480,25 @@
       <!-- Термокондуктометрический метод измерения концентрации газов. [Электронный ресурс] – -->
       <!-- Режим доступа:  -->
       <!-- {{ abstract.sources.s2 }} -->
-      <span v-html=" abstract.sources.s2"/>
+      <span v-html=" abstract.sources.s2" />
       <a href="http://ural-test.ru/help/articles/termo-konduktometricheskiy-metod/" target="_blank">http://ural-test.ru/help/articles/termo-konduktometricheskiy-metod/</a>
     </p>
     <p class="source">
       3.
       <!-- {{ abstract.sources.s3 }} -->
-      <span v-html=" abstract.sources.s3"/>
+      <span v-html=" abstract.sources.s3" />
       <!-- Бреслер П.И. Оптические абсорбционные газоанализаторы и их применение. – Л.: Энергия, 1980. – 164 с. -->
     </p>
     <p class="source">
       4.
       <!-- {{ abstract.sources.s4 }} -->
-      <span v-html=" abstract.sources.s4"/>
+      <span v-html=" abstract.sources.s4" />
       <!-- Карпов Е.Ф., Биренберг И.Э. Автоматическая газовая защита и контроль рудничной атмосферы. – М.: Наука, 1984. – 285с. -->
     </p>
     <p class="source">
       5.
       <!-- {{ abstract.sources.s5 }} -->
-      <span v-html=" abstract.sources.s5"/>
+      <span v-html=" abstract.sources.s5" />
       <!-- ГОСТ 24032 – 80. Приборы шахтные газоаналитические. Общие требования, методы
       испытания. – Введ. 01. 01. 1981 /Межгосударственный стандарт. – М.: Издательство
       стандартов, 1980. – 36 с. – (Угольная промышленность). -->
@@ -505,13 +507,13 @@
       6.
       <!-- IBSG [Електронний ресурс]. – Електронные данные. – Режим доступа: -->
       <!-- {{ abstract.sources.s6 }} -->
-      <span v-html=" abstract.sources.s6"/>
+      <span v-html=" abstract.sources.s6" />
       <a href="http://www.ibsg-st-petersburg.com" target="_blank">http://www.ibsg-st-petersburg.com</a>.
     </p>
     <p class="source">
       7.
       <!-- Энергетика [Електронний ресурс]. – Електронные данные. – Режим доступа: -->
-      <span v-html=" abstract.sources.s7"/>
+      <span v-html=" abstract.sources.s7" />
       <!-- {{ abstract.sources.s7 }} -->
       <a href="http://energetika.in.ua/ru/books/book-1/part-2/section-7/7-5" target="_blank">http://energetika.in.ua/ru/books/book-1/part-2/section-7/7-5</a>.
     </p>

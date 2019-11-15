@@ -17,7 +17,7 @@
         <p>
           <span>Руководитель:</span>
           <!-- {{ link.head }} -->
-          <span style="font-weight: normal" v-html="link.head"/>
+          <span style="font-weight: normal" v-html="link.head" />
         </p>
       </li>
       <h2>Научные работы и статьи</h2>
@@ -200,7 +200,7 @@ export default {
           author: ['Рыжков&nbsp;С.В.,', ' Новиков&nbsp;Е.Н.']
         },
         {
-          link: 'https://cyberleninka.ru/article/v/razrabotka-i-issledovaniya-eksperimentalnogo-obraztsa-izmeritelya-kontsentratsii-metana-dlya-ugolnyh-shaht',
+          link: 'https://cyberleninka.ru/article/n/razrabotka-i-issledovaniya-eksperimentalnogo-obraztsa-izmeritelya-kontsentratsii-metana-dlya-ugolnyh-shaht',
           title: 'Разработка и исследования экспериментального образца измерителя концентрации метана для угольных шахт',
           desc: 'Разработан и исследован экспериментальный образец измерителя концентрации метана для угольных шахт.',
           author: ['Вовна&nbsp;А.В.,', ' Зори&nbsp;А.А.']

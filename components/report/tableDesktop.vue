@@ -6,16 +6,16 @@
           Строка поиска
         </th>
         <th class="cn">
-          <img src="~/assets/imgs/icons/google.svg" alt="Google" class="svg">
+          <img src="~/assets/imgs/icons/google.svg" alt="Google" title="Google" class="svg">
         </th>
         <th class="cn">
-          <img src="~/assets/imgs/icons/yandex.svg" alt="Yandex" class="svg">
+          <img src="~/assets/imgs/icons/yandex.svg" alt="Yandex" title="Yandex" class="svg">
         </th>
         <th class="cn">
-          <img src="~/assets/imgs/icons/bing.svg" alt="bing" class="svg">
+          <img src="~/assets/imgs/icons/bing.svg" alt="Bing" title="Bing" class="svg">
         </th>
         <th class="cn">
-          <img src="~/assets/imgs/icons/meta.svg" alt="meta" class="svg">
+          <img src="~/assets/imgs/icons/meta.svg" alt="Meta" title="Meta" class="svg">
         </th>
       </tr>
       <tr>

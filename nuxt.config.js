@@ -18,6 +18,7 @@ export default {
   },
   router: {
     // base: '/2019/fkita/saveliev/',
+    // base: '/m2019/fkita/saveliev/',
     base: '/personal_site/',
     middleware: [
       'setLang'

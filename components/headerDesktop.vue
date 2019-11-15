@@ -3,9 +3,15 @@
     <div class="header">
       <transition name="fade">
         <div v-if="showModal" class="modal">
-          <img src="~/assets/imgs/saveliev_big.jpg" alt="" class="photo-big">
+          <img src="~/assets/imgs/saveliev_big.jpg" :alt="mainInfo.name" :title="mainInfo.name" class="photo-big">
           <div class="bg" @click="toggleModal(false)" />
-          <img src="~/assets/imgs/icons/close.svg" alt="Закрыть" class="close" title="Закрыть" @click="toggleModal(false)">
+          <img
+            src="~/assets/imgs/icons/close.svg"
+            :alt="(lang === 'ru' && 'Закрыть') || (lang === 'en' && 'Close') || (lang === 'uk' && 'Закрити')"
+            class="close"
+            :title="(lang === 'ru' && 'Закрыть') || (lang === 'en' && 'Close') || (lang === 'uk' && 'Закрити')"
+            @click="toggleModal(false)"
+          >
         </div>
       </transition>
       <app-lang class="z-index app-lang" />
@@ -48,8 +54,27 @@ export default {
   },
   computed: {
     ...mapState({
-      showModal: state => state.modal.showModal
-    })
+      showModal: state => state.modal.showModal,
+      lang: state => state.currentLang.lang
+    }),
+    mainInfo () {
+      if (this.lang === 'ru') {
+        return {
+          name: 'Савельев Дмитрий Александрович'
+        }
+      } else if (this.lang === 'uk') {
+        return {
+          name: 'Савельєв Дмитро Олександрович'
+        }
+      } else if (this.lang === 'en') {
+        return {
+          name: 'Dmitry Saveliev'
+        }
+      }
+      return {
+        name: 'Савельев Дмитрий Александрович'
+      }
+    }
   },
   mounted () {
     this.menuEl = this.$el.querySelector('.app-menu')
