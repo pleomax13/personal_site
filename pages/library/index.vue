@@ -99,7 +99,7 @@
         <p class="source">
           <span>Источник:</span>
           <a href="https://inis.iaea.org/collection/NCLCollectionStore/_Public/49/018/49018135.pdf" target="_blank">
-            International Nuclear Information System (INIS)
+            International Nuclear Information System (INIS).
           </a>
         </p>
       </li>
