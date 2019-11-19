@@ -5,17 +5,17 @@
     </h1>
     <h2>{{ titles.t1 }}</h2>
     <div class="links">
-      <a href="#relevance">{{ titles.t2 }}</a>
-      <a href="#target">{{ titles.t3 }}</a>
-      <a href="#structure">{{ titles.t4 }}</a>
-      <a href="#overview">{{ titles.t5 }}</a>
-      <a href="#factors">{{ titles.t6 }}</a>
-      <a href="#development">{{ titles.t7 }}</a>
+      <a href="#relevance">1. {{ titles.t2 }}</a>
+      <a href="#target">2. {{ titles.t3 }}</a>
+      <a href="#structure">3. {{ titles.t4 }}</a>
+      <a href="#overview">4. {{ titles.t5 }}</a>
+      <a href="#factors">5. {{ titles.t6 }}</a>
+      <a href="#development"> 6. {{ titles.t7 }}</a>
       <a href="#conclusions">{{ titles.t8 }}</a>
       <a href="#literature">{{ titles.t9 }}</a>
     </div>
     <h2 id="relevance">
-      {{ titles.t2 }}
+      1. {{ titles.t2 }}
     </h2>
     <div v-html="abstract.p1" />
     <!-- <p>
@@ -67,7 +67,7 @@
       влиянию основных возмущающих факторов рудничной атмосферы угольных шахт.
     </p> -->
     <h2 id="target">
-      {{ titles.t3 }}
+      2. {{ titles.t3 }}
     </h2>
     <div v-html="abstract.p2" />
     <!-- <p>
@@ -102,7 +102,7 @@
       получение математической модели системы измерения концентрации метана и структурной схемы системы.
     </p> -->
     <h2 id="structure">
-      {{ titles.t4 }}
+      3. {{ titles.t4 }}
     </h2>
     <p v-html="abstract.p3.p1">
       <!-- Предлагается следующая Обобщённая структурная схема спектрального
@@ -151,7 +151,7 @@
       устройства программного управления режимом работы и т. п.).
     </p> -->
     <h2 id="overview">
-      {{ titles.t5 }}
+      4. {{ titles.t5 }}
     </h2>
     <div v-html="abstract.p4.p1" />
     <!-- <p>
@@ -382,7 +382,7 @@
       {{ abstract.p19 }}
     </p>
     <h2 id="factors">
-      {{ titles.t6 }}
+      5. {{ titles.t6 }}
     </h2>
     <p>
       <!-- Проанализировав средства контроля, которые основаны на оптико-абсорбционном методе измерения,
@@ -402,7 +402,7 @@
       {{ abstract.p20 }}
     </p>
     <h2 id="development">
-      {{ titles.t7 }}
+      6. {{ titles.t7 }}
     </h2>
     <p>
       <!-- В оптическом газоанализаторе для увеличения стабильности нуля, а также для
