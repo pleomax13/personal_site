@@ -1,14 +1,14 @@
 ru
 Савельев Дмитрий Александрович
-Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра
+Исследование и разработка методов и средств повышения метрологической надежности оптического абсорбционного шахтного метанометра
 Электроника и наноэлектроника
 
 ua
 Савельєв Дмитро Александрович
-Дослідження і розробка методів і засобів метрологічної надійності оптичного адсорбционного шахтного метанометра
+Дослідження і розробка методів і засобів підвищення метрологічної надійності оптичного абсорбційного шахтного метанометра
 Електроніка та наноелектроніка
 
 en
 Dmitry Saveliev
-Research and development of methods and means of metrological reliability of an optical adsorption mine methanometer
-Electronics and Nanoelectronics
+Research and development of methods and means of improving the metrological reliability of an optical absorption mine methanometer
+Electronics and nanoelectronics
