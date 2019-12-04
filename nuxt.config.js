@@ -13,13 +13,13 @@ export default {
       { hid: 'description', name: 'description', content: 'Савельев Дмитрий Александрович – Исследование и разработка методов и средств метрологической надежности оптического адсорбционного шахтного метанометра' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/personal_site/favicon.ico' } // добавить путь к favicon
+      { rel: 'icon', type: 'image/x-icon', href: '/m2019/fkita/saveliev/favicon.ico' } // добавить путь к favicon
     ]
   },
   router: {
     // base: '/2019/fkita/saveliev/',
-    // base: '/m2019/fkita/saveliev/',
-    base: '/personal_site/',
+    base: '/m2019/fkita/saveliev/',
+    // base: '/personal_site/',
     middleware: [
       'setLang'
     ]
