@@ -7,7 +7,7 @@
     </p>
     <p class="subtitle-wrap">
       <span class="subtitle">Автор перевода: </span>
-      Савельев&nbsp;Д.А.
+      Савельев&nbsp;Д.&nbsp;А.
     </p>
     <p class="subtitle-wrap">
       <span class="subtitle">Источник:</span>
@@ -238,25 +238,25 @@
     </p>
     <h3>ЛИТЕРАТУРА</h3>
     <p class="left">
-      1.  C.C.&nbsp;Bueno, J.A.C.&nbsp;Gonçalves, M.D.&nbsp;de&nbsp;S.&nbsp;Santos, “The performance of low-cost
+      1.  C.&nbsp;C.&nbsp;Bueno, J.&nbsp;A.&nbsp;C.&nbsp;Gonçalves, M.&nbsp;D.&nbsp;de&nbsp;S.&nbsp;Santos, “The performance of low-cost
       commercial photodiodes for charged particle and X-ray spectrometry”, Nuclear
       Instruments and Methods in Physics Research A, 371, pp.460-464 (1996).
     </p>
     <p class="left">
-      2.   R.L.&nbsp;Owen, J.M.&nbsp;Holton, C.&nbsp;Schulze-Briese, E.F.&nbsp;Garman. “Determination of X-ray flux
+      2.   R.&nbsp;L.&nbsp;Owen, J.&nbsp;M.&nbsp;Holton, C.&nbsp;Schulze-Briese, E.&nbsp;F.&nbsp;Garman. “Determination of X-ray flux
       using silicon pin diodes”, J Synchrotron Radiat., 16(Pt 2), pp 143-151 (2009).
     </p>
     <p class="left">
-      3. C.N.P&nbsp;Oliveira, H.J.&nbsp;Khoury, E.J.P.&nbsp;Santos, “PiN photodiode performance comparison
+      3. C.&nbsp;N.&nbsp;P.&nbsp;Oliveira, H.&nbsp;J.&nbsp;Khoury, E.&nbsp;J.&nbsp;P.&nbsp;Santos, “PiN photodiode performance comparison
       for dosimetry in radiology applications”, Physica Medica, 32 pp. 1495-1501 (2016).
     </p>
     <p class="left">
-      4.P.H.&nbsp;Gooda, W.B.&nbsp;Gilboy, “High resolution alpha spectroscopy with low cost
+      4.P.&nbsp;H.&nbsp;Gooda, W.&nbsp;B.&nbsp;Gilboy, “High resolution alpha spectroscopy with low cost
       photodiodes”, Nuclear Instruments and Methods in Physics Research A, 255, pp.222-224
       (1987).
     </p>
     <p class="left">
-      5. R.&nbsp;Nowotny, W.L.&nbsp;Reiter, “The use of silicon pin-photodiodes as a low-energy
+      5. R.&nbsp;Nowotny, W.&nbsp;L.&nbsp;Reiter, “The use of silicon pin-photodiodes as a low-energy
       photonspectrometer”, Nuclear Instruments and Methods in Physics Research A, 147,
       pp.477-480 (1977).
     </p>
@@ -265,7 +265,7 @@
       Instrumentation, 4, P04004 (2009).
     </p>
     <p class="left">
-      7. P.&nbsp;Costa, M.P.&nbsp;Raele, H.&nbsp;Yoriyaz, P.T.D.&nbsp;Siqueira, G.S.&nbsp;Zahn, F.A.&nbsp;Genezini, “Boron
+      7. P.&nbsp;Costa, M.&nbsp;P.&nbsp;Raele, H.&nbsp;Yoriyaz, P.&nbsp;T.&nbsp;D.&nbsp;Siqueira, G.&nbsp;S.&nbsp;Zahn, F.&nbsp;A.&nbsp;Genezini, “Boron
       Film Thickness Determination To Develop A Low Cost Neutron Using Monte Carlo
       Method,” Proceedings of the 2015 International Nuclear Atlantic Conference, São Paulo,
       October 4-9 (2015).

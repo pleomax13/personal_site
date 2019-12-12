@@ -346,7 +346,7 @@ export default {
                 link: 'https://www.google.com/search?lr=lang_en&hl=ru&as_qdr=all&tbs=lr%3Alang_1en&sxsrf=ACYBGNSwvyupUWg_vtWRG-2_QTPoBeXAkw%3A1569562274397&ei=op6NXcfrF4ytrgSgs5zIDg&q=Optical+Absorption+Shaft+Methane+Meter&oq=Optical+Absorption+Shaft+Methane+Meter&gs_l=psy-ab.3..33i160.26973.26973..27880...0.0..0.174.174.0j1......0....2j1..gws-wiz.n1isijxK22g&ved=0ahUKEwjHxMWOo_DkAhWMlosKHaAZB-kQ4dUDCAs&uact=5'
               },
               {
-                text: '≈3 млн',
+                text: '≈ 3 млн',
                 link: 'https://yandex.ua/search/?text=Optical%20Absorption%20Shaft%20Methane%20Meter&lr=142&lang=en'
               },
               {
